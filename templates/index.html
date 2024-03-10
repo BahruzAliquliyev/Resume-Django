@@ -1,30 +1,35 @@
-<!DOCTYPE html>
-<html lang="en">
-{% include 'includes/head.html' with title='Home' %}
+{% extends 'layout.html' %}
+{% load static %}
+{% block content %}
 
-<body>
 
-{% include 'includes/navbar.html' %}
 
-<div class="container">
-    <div class="row">
-        <div class="col-md-12">
-            <h1>Resume App</h1>
-            
-        </div>
-            
+
+<div class="row">
+    <div class="col-md-12">
+        <h1 class="myHeader">Resume App</h1>
+
     </div>
-    <p><span>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ad autem cum cupiditate eligendi enim excepturi in iusto nisi nobis, porro quidem, repellendus ullam voluptas. Excepturi neque praesentium quia veniam voluptates.</span><span>Architecto, aspernatur assumenda at aut blanditiis culpa cum cupiditate doloribus dolorum error est expedita fugit iusto laudantium minima natus nobis perferendis quam quod ratione repellat saepe, tempore ut vero, voluptatem!</span><span>Ab atque corporis cum cupiditate earum itaque, saepe. A, ab aliquam aliquid, aut blanditiis consequuntur cupiditate dolorem fuga libero nesciunt nostrum optio porro quas quia quisquam, similique sunt ullam voluptatibus.</span><span>Atque eius eligendi expedita facilis labore molestias officia tempora tenetur vitae voluptas. Aliquid eaque iste odit. Architecto consectetur deleniti, earum est excepturi impedit ipsum laborum modi perferendis quam, quis ullam!</span><span>At deleniti dicta dolorum eligendi eveniet facilis ipsa libero molestias non numquam, obcaecati odit, omnis optio praesentium quasi qui, repellat repudiandae suscipit unde ut veritatis vero voluptate voluptatibus. Dolorum, nobis.</span><span>Aliquid aspernatur autem consequuntur dolorem eligendi et exercitationem impedit, iste itaque minus necessitatibus nostrum numquam odio officia officiis quaerat, quasi quisquam quos ratione rem repellat similique unde vel voluptas voluptates!</span><span>Amet debitis deserunt laudantium magni nulla officia quo voluptas voluptatem. Adipisci aperiam ducimus excepturi ipsum nesciunt porro soluta! Harum nobis reprehenderit voluptatibus. Corporis fugiat molestiae neque non sequi ut, voluptatum.</span><span>Accusamus accusantium alias, aliquam amet at aut consectetur cum debitis distinctio ducimus esse illo ipsa ipsum iure magni maxime quia quibusdam quidem quisquam quod repellendus sint tempora totam ut voluptates.</span><span>Ad aperiam at consequatur delectus dolore dolorem fugit illo itaque iure laborum maiores maxime neque nulla odit, officiis optio perspiciatis quam quia quidem quis quo repudiandae sunt ullam unde vitae?</span><span>Aut eligendi est id impedit iste, laboriosam molestiae totam? At dolorem dolores ducimus ex mollitia quis quod veniam veritatis voluptatem. Amet animi autem commodi corporis cupiditate dolorem error odit? Fuga!</span></p>
-<div class="card" style="width: 18rem;">
-  <img src="https://placehold.co/450x300" class="card-img-top" alt="...">
-  <div class="card-body">
-    <h5 class="card-title">Card title</h5>
-    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-    <a href="#" class="btn btn-primary">Go somewhere</a>
-  </div>
-</div>
-</div>
 
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
-</body>
-</html>
+</div>
+<p><span>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ad autem cum cupiditate eligendi enim excepturi in iusto nisi nobis, porro quidem, repellendus ullam voluptas. Excepturi neque praesentium quia veniam voluptates.</span><span>Architecto, aspernatur assumenda at aut blanditiis culpa cum cupiditate doloribus dolorum error est expedita fugit iusto laudantium minima natus nobis perferendis quam quod ratione repellat saepe, tempore ut vero, voluptatem!</span><span>Ab atque corporis cum cupiditate earum itaque, saepe. A, ab aliquam aliquid, aut blanditiis consequuntur cupiditate dolorem fuga libero nesciunt nostrum optio porro quas quia quisquam, similique sunt ullam voluptatibus.</span><span>Atque eius eligendi expedita facilis labore molestias officia tempora tenetur vitae voluptas. Aliquid eaque iste odit. Architecto consectetur deleniti, earum est excepturi impedit ipsum laborum modi perferendis quam, quis ullam!</span><span>At deleniti dicta dolorum eligendi eveniet facilis ipsa libero molestias non numquam, obcaecati odit, omnis optio praesentium quasi qui, repellat repudiandae suscipit unde ut veritatis vero voluptate voluptatibus. Dolorum, nobis.</span><span>Aliquid aspernatur autem consequuntur dolorem eligendi et exercitationem impedit, iste itaque minus necessitatibus nostrum numquam odio officia officiis quaerat, quasi quisquam quos ratione rem repellat similique unde vel voluptas voluptates!</span><span>Amet debitis deserunt laudantium magni nulla officia quo voluptas voluptatem. Adipisci aperiam ducimus excepturi ipsum nesciunt porro soluta! Harum nobis reprehenderit voluptatibus. Corporis fugiat molestiae neque non sequi ut, voluptatum.</span><span>Accusamus accusantium alias, aliquam amet at aut consectetur cum debitis distinctio ducimus esse illo ipsa ipsum iure magni maxime quia quibusdam quidem quisquam quod repellendus sint tempora totam ut voluptates.</span><span>Ad aperiam at consequatur delectus dolore dolorem fugit illo itaque iure laborum maiores maxime neque nulla odit, officiis optio perspiciatis quam quia quidem quis quo repudiandae sunt ullam unde vitae?</span><span>Aut eligendi est id impedit iste, laboriosam molestiae totam? At dolorem dolores ducimus ex mollitia quis quod veniam veritatis voluptatem. Amet animi autem commodi corporis cupiditate dolorem error odit? Fuga!</span>
+</p>
+<div class="card" style="width: 18rem;">
+    <img src="{% get_media_prefix %}card.png" class="card-img-top" alt="...">
+    <div class="card-body">
+        <h5 class="card-title">Card title</h5>
+        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's
+            content.</p>
+        <a href="#" class="btn btn-primary">Go somewhere</a>
+    </div>
+</div>
+    
+{% endblock %}
+
+{% block extra_scripts %}
+{% endblock %}
+    <script>
+        console.log('Hello World');
+        </script>
+
+
