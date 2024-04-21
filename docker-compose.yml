@@ -1,18 +1,19 @@
+version: "3.10"
+services:
+  app:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    env_file:
+      - resume/docker.env
+    volumes:
+      - .:/app
+    ports:
+      - "0.0.0.0:8000:8000"
+    command: python manage.py runserver 0.0.0.0:8000
 
-    version: "3.10"
-    services:
-      app:
-        build:
-          context: .
-          dockerfile: Dockerfile
-        env_file:
-          - djangoProject/docker.env
-        ports:
-          - "0.0.0.0:8000:8000"
-        command: python manage.py runserver 0.0.0.0:8000
-
-   volumes:
-     static-data:
+volumes:
+  static-data:
 
 
 

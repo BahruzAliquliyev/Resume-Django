@@ -20,7 +20,7 @@ ENV PATH="$VIRTUAL_ENV/bin:$PATH"
 ADD ./requirements.txt /tmp/requirements.txt
 RUN pip install -r /tmp/requirements.txt
 
-COPY . /srv/
-WORKDIR /srv/sudo app
+COPY . /srv/app
+WORKDIR /srv/app
 
 
