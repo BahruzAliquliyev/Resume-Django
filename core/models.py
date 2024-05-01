@@ -85,6 +85,7 @@ class ImageSetting(models.Model):
 
     def __str__(self):
         return f'Image Setting: {self.name}'
+
     class Meta:
         verbose_name = 'Image Setting'
         verbose_name_plural = 'Image Settings'
