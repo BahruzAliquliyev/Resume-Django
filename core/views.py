@@ -2,7 +2,7 @@ from django.shortcuts import render
 from core.models import GeneralSetting, ImageSetting, Skill
 
 
-# Create your views here.
+# Create your views here.Create your views here.
 
 def index(request):
     site_title = GeneralSetting.objects.get(name='site_title').parameters
